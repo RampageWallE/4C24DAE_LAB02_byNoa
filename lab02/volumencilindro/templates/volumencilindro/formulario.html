@@ -1,0 +1,9 @@
+<h2>{{ titulo }}</h2> <br>
+<form action="{% url 'volumencilindro:enviar_vol' %}" method="post">
+    {% csrf_token %}
+    Introduzca el diametro en metros:
+    <input type="number" name="diametro" required><br>
+    Introduzca la altura en metros:
+    <input type="number" name="altura" required><br>
+    <input type="submit" name="submit" value="Calcular">
+</form>
